@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "Sandeep_backend": {
+      "main": "src/Sandeep_backend/main.mo",
+      "type": "motoko"
+    },
+    "Sandeep_frontend": {
+      "dependencies": [
+        "Sandeep_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/Sandeep_frontend/src/index.html"
+      },
+      "source": [
+        "src/Sandeep_frontend/assets",
+        "dist/Sandeep_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
